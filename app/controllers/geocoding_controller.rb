@@ -11,7 +11,6 @@ class GeocodingController < ApplicationController
     url_safe_street_address = URI.encode(@street_address)
 
    url = "http://maps.googleapis.com/maps/api/geocode/json?address=#{url_safe_street_address}"
-   
    parsed_data = JSON.parse(open(url).read)
 
     # ==========================================================================
